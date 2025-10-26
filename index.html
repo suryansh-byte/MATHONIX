@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MATHIONIX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="dynamic-bg"></div>
+    <header>
+        <h1 class="logo">MATHIONIX</h1>
+        <div id="clock" class="digital-clock"></div>
+        <div class="top-controls">
+            <select id="theme-selector" title="Choose Theme">
+                <option value="default">Neon Space</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="matrix">Matrix Green</option>
+                <option value="futuristic">Futuristic Cyan</option>
+            </select>
+            <button id="football-toggle">⚽ Football Game</button>
+        </div>
+    </header>
+    <main>
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+            <div class="buttons"></div>
+            <button id="voice-btn">🎤 Voice Input</button>
+            <button id="clear-history">Clear History</button>
+        </div>
+        <section class="history">
+            <h2>Calculation History</h2>
+            <ul id="history-list"></ul>
+        </section>
+    </main>
+    <!-- Football game section (outside <main>) -->
+    <div id="football-game-container" style="display:none;">
+        <h2>Football Game</h2>
+        <canvas id="football-canvas" width="600" height="300"></canvas>
+        <div>
+            <p>Move: <b>Arrow Keys</b> | Shoot: <b>Space</b></p>
+            <span id="match-score"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
